@@ -1,0 +1,33 @@
+2022-09-23 07:31:44,049 INFO [restartedMain] org.springframework.boot.logging.DeferredLog: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-09-23 07:31:45,339 INFO [restartedMain] org.springframework.boot.SpringApplication: No active profile set, falling back to 1 default profile: "default"
+2022-09-23 07:31:46,675 INFO [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-09-23 07:31:46,754 INFO [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate: Finished Spring Data repository scanning in 68 ms. Found 2 JPA repository interfaces.
+2022-09-23 07:31:47,033 INFO [restartedMain] org.springframework.cloud.context.scope.GenericScope: BeanFactory id=34bef821-2865-3b82-b516-fa334281b851
+2022-09-23 07:31:48,197 INFO [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer: Tomcat initialized with port(s): 8088 (http)
+2022-09-23 07:31:48,223 INFO [restartedMain] org.apache.juli.logging.DirectJDKLog: Initializing ProtocolHandler ["http-nio-8088"]
+2022-09-23 07:31:48,224 INFO [restartedMain] org.apache.juli.logging.DirectJDKLog: Starting service [Tomcat]
+2022-09-23 07:31:48,224 INFO [restartedMain] org.apache.juli.logging.DirectJDKLog: Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-23 07:31:48,375 INFO [restartedMain] org.apache.juli.logging.DirectJDKLog: Initializing Spring embedded WebApplicationContext
+2022-09-23 07:31:48,376 INFO [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext: Root WebApplicationContext: initialization completed in 3021 ms
+2022-09-23 07:31:48,655 INFO [restartedMain] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Starting...
+2022-09-23 07:31:48,899 INFO [restartedMain] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Start completed.
+2022-09-23 07:31:48,960 INFO [restartedMain] org.hibernate.jpa.internal.util.LogHelper: HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-09-23 07:31:49,016 INFO [restartedMain] org.hibernate.Version: HHH000412: Hibernate ORM core version 5.6.11.Final
+2022-09-23 07:31:49,228 INFO [restartedMain] org.hibernate.annotations.common.reflection.java.JavaReflectionManager: HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-09-23 07:31:49,432 INFO [restartedMain] org.hibernate.dialect.Dialect: HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2022-09-23 07:31:50,464 INFO [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator: HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-09-23 07:31:50,477 INFO [restartedMain] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-09-23 07:31:51,129 WARN [restartedMain] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-09-23 07:31:52,112 INFO [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer: LiveReload server is running on port 35729
+2022-09-23 07:31:52,956 INFO [restartedMain] org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver: Exposing 15 endpoint(s) beneath base path '/actuator'
+2022-09-23 07:31:52,987 INFO [restartedMain] org.apache.juli.logging.DirectJDKLog: Starting ProtocolHandler ["http-nio-8088"]
+2022-09-23 07:31:53,009 INFO [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer: Tomcat started on port(s): 8088 (http) with context path ''
+2022-09-23 07:31:53,552 INFO [restartedMain] org.springframework.boot.StartupInfoLogger: Started ProductApplication in 11.068 seconds (JVM running for 12.483)
+2022-09-23 07:33:20,538 INFO [http-nio-8088-exec-2] org.apache.juli.logging.DirectJDKLog: Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-23 07:33:20,539 INFO [http-nio-8088-exec-2] org.springframework.web.servlet.FrameworkServlet: Initializing Servlet 'dispatcherServlet'
+2022-09-23 07:33:20,541 INFO [http-nio-8088-exec-2] org.springframework.web.servlet.FrameworkServlet: Completed initialization in 2 ms
+2022-09-23 08:02:20,335 WARN [http-nio-8088-exec-8] org.hibernate.persister.entity.AbstractEntityPersister: HHH000502: The [client] property of the [ecu.project.product.persistence.model.entity.AccountEntity] entity was modified, but it won't be updated because the property is immutable.
+2022-09-23 08:04:35,934 WARN [http-nio-8088-exec-1] org.hibernate.persister.entity.AbstractEntityPersister: HHH000502: The [client] property of the [ecu.project.product.persistence.model.entity.AccountEntity] entity was modified, but it won't be updated because the property is immutable.
+2022-09-23 09:42:18,619 INFO [SpringApplicationShutdownHook] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-09-23 09:42:18,659 INFO [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Shutdown initiated...
+2022-09-23 09:42:18,678 INFO [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Shutdown completed.
