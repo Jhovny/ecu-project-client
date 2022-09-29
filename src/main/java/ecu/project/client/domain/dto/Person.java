@@ -15,7 +15,7 @@ public class Person {
     private String name;
     private String gender;
     private int age;
-    private int addres;
+    private String addres;
     private String phone;
     private String identification;
 

@@ -2,16 +2,20 @@ package ecu.project.client.web.controller;
 
 import ecu.project.client.domain.dto.Client;
 import ecu.project.client.domain.service.ClientService;
+import ecu.project.client.infraestructure.exception.APIException;
+import ecu.project.client.infraestructure.exception.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import java.util.List;
 
 @RestController
 @RequestMapping("/clientes")
 public class ClientController {
+    private static final Logger log = LoggerFactory.getLogger(ClientController.class);
 
     @Autowired
     private ClientService clientService;
@@ -22,17 +26,25 @@ public class ClientController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Client> getAll(@PathVariable long id) {
+    public ResponseEntity<Client> getId(@PathVariable long id) throws ResourceNotFoundException {
 
         return clientService.getById(id)
                 .map(client -> new ResponseEntity<>(client, HttpStatus.OK))
-                .orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
+                .orElseThrow(() -> new ResourceNotFoundException("No se encontro cliente para id="+ id));
 
     }
 
     @PostMapping
     public ResponseEntity<Client> create(@RequestBody Client client){
-        return  new ResponseEntity<>(this.clientService.save(client), HttpStatus.OK) ;
+
+        try {
+            return new ResponseEntity<>(this.clientService.save(client), HttpStatus.OK);
+        }
+        catch (APIException err){
+            log.error("Create",err);
+            return new ResponseEntity(new APIException("Error Interno, intente nuavamente pf"), HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+
     }
 
 

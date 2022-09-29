@@ -3,10 +3,12 @@ package ecu.project.client.domain.service;
 import ecu.project.client.domain.dto.Client;
 import ecu.project.client.domain.repository.IClientRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
+
 
 @Service
 public class ClientService {
